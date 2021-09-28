@@ -1,0 +1,166 @@
+\documentclass[12pt]{article}
+
+% PAQUETES IMPORTADOS
+\usepackage[utf8]{inputenc}                     %input encoding
+\usepackage[a4paper, margin=2.5cm]{geometry}    %margins
+\usepackage{sectsty}                            %tamanos de cabeceras
+\usepackage[spanish,es-tabla]{babel}            %espanol
+\usepackage{fontspec}                           %fuentes
+\usepackage{anyfontsize}                        %tamanos de fuentes
+\usepackage[style=ieee]{biblatex}               %bibliografia
+\usepackage{csquotes}                           %citas a bibliografia
+\usepackage{nameref}                            %referencia a capitulos
+\usepackage{amsmath}                            %inline maths
+\usepackage{amssymb}                            %math symbols
+\usepackage{graphicx}                           %imagenes
+\usepackage{color}                              %colores de fuentes
+\usepackage{hyperref}                           %enlaces
+\usepackage{ulem}                               %subrayados decentes
+
+% PROPIEDADES DE PAQUETES
+\hypersetup{    % Color de enlaces (usados para referencias a capítulos)
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% ARCHIVOS Y CARPETAS AUXILIARES
+\graphicspath{ {./images/} }
+\addbibresource{biblio.bib}
+
+% FUENTES
+\renewcommand{\contentsname}{Índice de Contenidos}
+\setmainfont{Times New Roman}
+\sectionfont{\fontsize{20pt}{15}\selectfont}
+\subsectionfont{\fontsize{18pt}{15}\selectfont}
+\subsubsectionfont{\fontsize{16pt}{15}\selectfont}
+
+\begin{document}
+
+%---------------------------------------------------
+% PORTADA
+%---------------------------------------------------
+\begin{titlepage}
+\begin{flushright}
+\hfill\parbox[r][][c]{0.5\textwidth}{
+{\fontsize{14}{14}\selectfont Universidad de Valladolid \\
+E.T.S Ingeniería Informática \\
+Grado en Ingeniería Informática\\
+Rama de Ingeniería de Software\\
+Cuarto Curso}}
+
+\end{flushright}
+
+\vfill
+\centering
+{\fontsize{16pt}{1cm}\selectfont \textbf{Resumen del Libro de la Asignatura <<Planificación y Gestión de Proyectos>>: Software Project Management}}
+
+
+\vfill
+\begin{flushright}
+\hfill\parbox[r][][c]{0.4\textwidth}{
+{\fontsize{14pt}{14cm}\selectfont
+Bayón Sanz, Miguel
+}
+}
+\end{flushright}
+
+\end{titlepage}
+
+%---------------------------------------------------
+% INDICE
+%---------------------------------------------------
+\tableofcontents
+\newpage
+
+%---------------------------------------------------
+% CUERPO
+%---------------------------------------------------
+
+%---------------------------------------------------
+% SECCION 1
+%---------------------------------------------------
+\newpage
+\section{Introducción a la gestión de proyectos\\ Software}
+\label{1.0.0}
+\subsection{Introducción}
+\label{1.1.0}
+
+{Los proyectos de Software, al igual que otros proyectos, se basan en cumplir una serie de objetivos para satisfacer necesidades reales. Esto se hará encontrando a los inversores y sus objetivos. La gestión de proyectos tiene como finalidad cumplir sus objetivos, conociendo el estado del mismo proyecto en todo momento.}
+
+\subsection{¿Por qué es importante la gestión de proyectos de Software?}
+\label{1.2.0}
+
+{Los proyectos de Software son el tipo de proyecto que más dinero mueve, implicando que una mala gestión haga que se pueda perder todo ese dinero. Según un estudio, de entre 13.522 proyectos:}
+
+\begin{itemize}
+    \item {El 66\% fracasa.}
+    \item {El 82\% terminan tarde.}
+    \item {El 43\% excede el presupuesto.}
+\end{itemize}
+
+\subsection{¿Qué es un proyecto?}
+\label{1.3.0}
+
+{Un proyecto es una \textbf{actividad planeada} que cuenta con la definición de todos los pasos y de su duración. Este cuenta también con una definición oficial establecida en el BSO ISO 10006 (1997): \textit{Proceso único consistente en un conjunto de actividades coordinadas y controladas con fechas de inicio y fin, promovido para conseguir un objetivo conforme a requisitos específicos incluyendo restricciones de tiempo, coste y recursos}.} \\
+
+{El proyecto se encuentra en un término medio entre un trabajo rutinario y una investigación. Para diferenciarlos, debe cumplir los siguientes puntos:}
+
+\begin{itemize}
+    \item {Debe contener \textbf{tareas no rutinarias}.}
+    \item {Requiere \textbf{planificación}.}
+    \item {Debe cumplir \textbf{objetivos específicos}.}
+    \item {Se debe completar en un \textbf{periodo de tiempo}.}
+    \item {El trabajo se realiza \textbf{para otra persona}.}
+    \item {Implica \textbf{varias especialidades}.}
+    \item {Los empleados formarán un \textbf{grupo de trabajo temporal}.}
+    \item {El trabajo se llevará a cabo en \textbf{varias fases}.}
+    \item {Los \textbf{recursos} del proyecto estarán \textbf{limitados}.}
+    \item {Debe ser un proyecto \textbf{grande y/o complejo}.}
+\end{itemize}
+
+{El tamaño del equipo es especialmente importante, porque implicará una mayor organización entre los participantes. Además, toda la experiencia ganada como equipo \textbf{se perderá al disolverse} el mismo (al ser grupos temporales).}
+
+\subsection{Proyectos de Software vs otros tipos de proyectos}
+\label{1.4.0}
+
+{Algunas características de los proyectos de Software los hacen especialmente complicados:}
+
+\begin{itemize}
+    \item {\textbf{Invisibilidad}: el progreso no es inmediatamente visible.}
+    \item {\textbf{Complejidad}: el proyecto de Software tiene gran complejidad por unidad monetaria.}
+    \item {\textbf{Conformidad}: los desarrolladores se tienen que conformar con los requisitos de los clientes, que pueden ser cambiantes e inconsistentes.}
+    \item {\textbf{Flexibilidad}: los sistemas Software están sujetos al cambio para acomodarse a elementos externos.}
+\end{itemize}
+
+\subsection{Gestión de contratos y gestión de proyectos técnicos}
+\label{1.5.0}
+
+{En los proyectos internos se desarrolla para la misma organización. En los externos, al haber un contrato entre cliente y proveedor, existirán dos gestores de proyectos: uno del lado del cliente y otro del lado del proveedor. El del cliente (gestor del contrato) se ocupará de comprobar que el proyecto cumpla con los plazos y se ajuste al presupuesto, mientras que el del proveedor se ocupará de las decisiones de carácter técnico del proyecto.}
+
+\subsection{Actividades cubiertas por la gestión de proyectos de Software}
+\label{1.6.0}
+
+{Un proyecto de Software suele pasar por \textbf{tres procesos} para generar un nuevo sistema:}
+
+\begin{itemize}
+    \item {\textbf{Estudio de viabilidad}: se evalúa lo que se quiere conseguir con sus requisitos y se comprueba que el proyecto sea viable. Si el proyecto es grande, el estudio de viabilidad puede ser un proyecto en sí mismo.}
+    \item {\textbf{Planificación}: si el proceso anterior es positivo puede comenzar la planificación. Para proyectos muy grandes, la planificación no se detalla desde el principio, sino que se genera un guion }
+\end{itemize}
+
+%---------------------------------------------------
+% BIBLIOGRAFIA
+%---------------------------------------------------
+
+\newpage
+\section{Única bibliografía}
+\nocite{*}
+\begingroup
+\renewcommand{\section}[2]{}%
+\printbibliography
+\endgroup
+
+
+\end{document}
