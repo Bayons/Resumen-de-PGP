@@ -83,14 +83,14 @@ Bayón Sanz, Miguel
 % Seccion 1
 %---------------------------------------------------
 \newpage
-\section{Introducción a la gestión de proyectos\\ Software}
+\section{Introducción a la gestión de proyectos Software}
 \label{1.0.0}
 \subsection{Introducción}
 \label{1.1.0}
 
 {Los proyectos de Software, al igual que otros proyectos, se basan en cumplir una serie de objetivos para satisfacer necesidades reales. Esto se hará encontrando a los inversores y sus objetivos. La gestión de proyectos tiene como finalidad cumplir sus objetivos, conociendo el estado del mismo proyecto en todo momento.}
 
-\subsection{¿Por qué es importante la gestión de proyectos de Software?}
+\subsection[¿Por qué es importante la gestión de proyectos de Software?]{¿Por qué es importante la gestión de proyectos de \\ Software?}
 \label{1.2.0}
 
 {Los proyectos de Software son el tipo de proyecto que más dinero mueve, implicando que una mala gestión haga que se pueda perder todo ese dinero. Según un estudio, de entre 13.522 proyectos:}
@@ -356,6 +356,107 @@ Bayón Sanz, Miguel
 
 \subsection{Gestión del portfolio de proyectos}
 \label{2.3.0}
+
+{La gestión del portfolio de proyectos implica el reparto de recursos entre proyectos posibles y/o en desarrollo y comprobar qué proyectos merecen la pena y cuáles no para mantenerlos o abandonarlos, así como indicar las dependencias entre proyectos y asegurarse de no duplicar trabajo o no perder (u olvidarse de) trabajo necesario.}
+
+\subsubsection{Definición del portfolio de proyectos}
+\label{2.3.1}
+
+{Se define qué proyectos van a estar en el portfolio, esto es, si van a estar todos los de la empresa o solo los que sean de cierto tipo: de nuevo producto, de actualización de producto, etc. Si todos los tipos de proyectos usan los mismos recursos, entonces se guardan todos en el mismo portfolio.}
+
+\newpage
+\subsubsection{Gestión del portfolio de proyectos}
+\label{2.3.2}
+
+{Se indica en este mismo portfolio los costes detallados de los proyectos incluidos en él.}
+
+\subsubsection{Optimización del portfolio de proyectos}
+\label{2.3.3}
+
+{Se monitoriza el rendimiento de los proyectos y se intenta compensar los proyectos que dan poco dinero pero son seguros con los que dan mucho pero tienen un riesgo alto.}
+
+\subsubsection{Algunos problemas con la gestión del portfolio de proyectos}
+\label{2.3.4}
+
+{Puede haber problemas con los recursos que estén siendo usados en varios proyectos al mismo tiempo, ya que puede no estar apreciado el trabajo de estos en tareas rutinarias o en proyectos que sean tan pequeños que no se hayan mencionado en el portfolio.} \\
+
+{Lo que se hace en estos casos es reservar un pequeño tiempo para los recursos en que pueden dedicarse a estas tareas no planeadas.}
+
+\subsection{Evaluación de proyectos individuales}
+\label{2.4.0}
+\subsubsection{Evaluación técnica}
+\label{2.4.1}
+
+{Se comprueba si la funcionalidad puede ser conseguida con las tecnologías actualmente asequibles.}
+
+\subsubsection{Análisis coste-beneficio}
+\label{2.4.2}
+
+{Se comprueba que un proyecto sea abordable dé o no beneficios. Para ello:}
+
+\begin{itemize}
+    \item {Se comprueban \textbf{todos} los costes y beneficios posibles y por haber de completar el proyecto.}
+    \item {Se expresan estos costes y beneficios en la misma unidad monetaria.}
+\end{itemize}
+
+{La mayoría de costes se pueden agrupar en:}
+
+\begin{itemize}
+    \item {Costes de desarrollo y personal de desarrollo.}
+    \item {Costes de implementación (puesta en marcha).}
+    \item {Costes operacionales (post-puesta en marcha).}
+\end{itemize}
+
+\subsubsection{Previsión de cash flow}
+\label{2.4.3}
+
+{Muestra cuándo ocurrirán los gastos y beneficios. Típica y lógicamente, los gastos ocurrirán tiempo antes de los beneficios, que llegarán con el resultado final del proyecto. A esta previsión por lo general se le omite la inflación.}
+
+\subsection{Técnicas de evaluación de coste-beneficio}
+\label{2.5.0}
+
+{A continuación se muestran las técnicas de evaluación con los ejemplos del libro. Se asume que los valores indicados son el total de todo el año ocurrido.}
+
+\subsubsection{Beneficio neto}
+\label{2.5.1}
+
+{Se suma costes y beneficios de un proyecto totales. Este método tiene la ventaja de mostrar el beneficio final de un proyecto. Como desventaja se podría decir que no da importancia a cuándo se devuelve la inversión y que las estimaciones a largo plazo suelen ser muy inexactas.}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+Año            & Proyecto 1 & Proyecto 2 & Proyecto 3 & Proyecto 4 \\
+0              & -100.000   & -1.000.000 & -100.000   & -120.000   \\
+1              & 10.000     & 200.000    & 30.000     & 30.000     \\
+2              & 10.000     & 200.000    & 30.000     & 30.000     \\
+3              & 10.000     & 200.000    & 30.000     & 30.000     \\
+4              & 20.000     & 200.000    & 30.000     & 30.000     \\
+5              & 100.000    & 300.000    & 30.000     & 75.000     \\ \hline
+Beneficio neto & 50.000     & 100.000    & 50.000     & 75.000    
+\end{tabular}%
+}
+\caption{Beneficios netos}
+\label{tab:table2511}
+\end{table}
+
+\subsubsection{Periodo de recuperación de la inversión}
+\label{2.5.2}
+
+{Tiempo que tarda en igualarse el coste con el beneficio en un proyecto. Las empresas suelen escoger proyectos con menor periodo de amortización para reducir el tiempo en que están en deuda.} \\
+
+{Como desventaja, ignora totalmente la rentabilidad del proyecto. Como ventaja, es sencillo y poco sensible a pequeños errores de previsión.}
+
+\subsubsection{Retorno de inversión (ROI)}
+\label{2.5.3}
+
+{También Tasa de Rendimiento Contable (\textit{Accounting Rate of Return}, ARR), ofrece una medida de rentabilidad juntando ganancias, costes y tiempo. El porcentaje representa la media de recuperación de la inversión por unidad de tiempo. Por ejemplo, en el proyecto 1 de la tabla~\ref{tab:table2511}:}
+
+\begin{equation}
+    x+ y = z
+\end{equation}
 
 %---------------------------------------------------
 % BIBLIOGRAFIA
