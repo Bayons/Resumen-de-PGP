@@ -16,6 +16,7 @@
 \usepackage{color}                              %colores de fuentes
 \usepackage{hyperref}                           %enlaces
 \usepackage{ulem}                               %subrayados decentes
+\usepackage{titlesec}                           %tamaños de títulos
 
 % PROPIEDADES DE PAQUETES
 \hypersetup{    % Color de enlaces (usados para referencias a capítulos)
@@ -25,6 +26,11 @@
     linkcolor=black,
     urlcolor=black
 }
+
+%tamaños de títulos
+\titleformat*{\section}{\Huge\bfseries}
+\titleformat*{\subsection}{\LARGE\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
 
 % ARCHIVOS Y CARPETAS AUXILIARES
 \graphicspath{ {./images/} }
@@ -90,7 +96,7 @@ Bayón Sanz, Miguel
 
 {Los proyectos de Software, al igual que otros proyectos, se basan en cumplir una serie de objetivos para satisfacer necesidades reales. Esto se hará encontrando a los inversores y sus objetivos. La gestión de proyectos tiene como finalidad cumplir sus objetivos, conociendo el estado del mismo proyecto en todo momento.}
 
-\subsection[¿Por qué es importante la gestión de proyectos de Software?]{¿Por qué es importante la gestión de proyectos de \\ Software?}
+\subsection[¿Por qué es importante la gestión de proyectos de Software?]{¿Por qué es importante la gestión de proyectos de Software?}
 \label{1.2.0}
 
 {Los proyectos de Software son el tipo de proyecto que más dinero mueve, implicando que una mala gestión haga que se pueda perder todo ese dinero. Según un estudio, de entre 13.522 proyectos:}
@@ -123,7 +129,7 @@ Bayón Sanz, Miguel
 
 {El tamaño del equipo es especialmente importante, porque implicará una mayor organización entre los participantes. Además, toda la experiencia ganada como equipo \textbf{se perderá al disolverse} el mismo (al ser grupos temporales).}
 
-\subsection{Proyectos de Software vs otros tipos de proyectos}
+\subsection[Proyectos de Software vs otros tipos de proyectos]{Proyectos de Software vs otros tipos de \\proyectos}
 \label{1.4.0}
 
 {Algunas características de los proyectos de Software los hacen especialmente complicados:}
@@ -135,12 +141,12 @@ Bayón Sanz, Miguel
     \item {\textbf{Flexibilidad}: los sistemas Software están sujetos al cambio para acomodarse a elementos externos.}
 \end{itemize}
 
-\subsection{Gestión de contratos y gestión de proyectos técnicos}
+\subsection[Gestión de contratos y gestión de proyectos técnicos]{Gestión de contratos y gestión de proyectos \\técnicos}
 \label{1.5.0}
 
 {En los proyectos internos se desarrolla para la misma organización. En los externos, al haber un contrato entre cliente y proveedor, existirán dos gestores de proyectos: uno del lado del cliente y otro del lado del proveedor. El del cliente (gestor del contrato) se ocupará de comprobar que el proyecto cumpla con los plazos y se ajuste al presupuesto, mientras que el del proveedor se ocupará de las decisiones de carácter técnico del proyecto.}
 
-\subsection{Actividades cubiertas por la gestión de proyectos de Software}
+\subsection[Actividades cubiertas por la gestión de proyectos de Software]{Actividades cubiertas por la gestión de \\proyectos de Software}
 \label{1.6.0}
 
 {Un proyecto de Software suele pasar por \textbf{tres procesos} para generar un nuevo sistema:}
@@ -150,7 +156,6 @@ Bayón Sanz, Miguel
     \item {\textbf{Planificación}: si el proceso anterior tiene un resultado positivo puede comenzar la planificación. Para proyectos muy grandes, la planificación no se detalla desde el principio, sino que se genera un guion general para todo el proyecto y se detalla solamente la primera etapa, dejando el resto para cuando se llegue a ellas.}
     \item {\textbf{Ejecución de proyecto}: El proyecto se ejecuta, a veces con sub-secciones de diseño e implementación. El libro, además, recalca la diferencia entre planificación (detallado de las actividades a llevar a cabo para generar un producto) y el diseño (decisiones sobre la forma del producto final).}
 \end{itemize}
-\newpage
 
 {Durante el proceso de implementación, surgirán actividades como las siguientes:}
 
@@ -233,8 +238,6 @@ Bayón Sanz, Miguel
 
 {Los planes de proyecto deben asegurarse de que el Business case se mantiene intacto.}
 
-\newpage
-
 \subsection{Éxito y fracaso de un proyecto}
 \label{1.12.0}
 
@@ -277,7 +280,7 @@ Bayón Sanz, Miguel
 %---------------------------------------------------
 \newpage
 
-\section{Evaluación de proyectos y gestión de programas}
+\section[Evaluación de proyectos y gestión de programas]{Evaluación de proyectos y gestión de \\programas}
 \label{2.0.0}
 \subsection{Introducción}
 \label{2.1.0}
@@ -364,7 +367,6 @@ Bayón Sanz, Miguel
 
 {Se define qué proyectos van a estar en el portfolio, esto es, si van a estar todos los de la empresa o solo los que sean de cierto tipo: de nuevo producto, de actualización de producto, etc. Si todos los tipos de proyectos usan los mismos recursos, entonces se guardan todos en el mismo portfolio.}
 
-\newpage
 \subsubsection{Gestión del portfolio de proyectos}
 \label{2.3.2}
 
@@ -424,7 +426,7 @@ Bayón Sanz, Miguel
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lllll}
@@ -438,8 +440,8 @@ Año            & Proyecto 1 & Proyecto 2 & Proyecto 3 & Proyecto 4 \\
 Beneficio neto & 50.000     & 100.000    & 50.000     & 75.000    
 \end{tabular}%
 }
-\caption{Beneficios netos}
-\label{tab:table2511}
+\caption{Beneficios Netos}
+\label{tab:2.1}
 \end{table}
 
 \subsubsection{Periodo de recuperación de la inversión}
@@ -452,11 +454,166 @@ Beneficio neto & 50.000     & 100.000    & 50.000     & 75.000
 \subsubsection{Retorno de inversión (ROI)}
 \label{2.5.3}
 
-{También Tasa de Rendimiento Contable (\textit{Accounting Rate of Return}, ARR), ofrece una medida de rentabilidad juntando ganancias, costes y tiempo. El porcentaje representa la media de recuperación de la inversión por unidad de tiempo. Por ejemplo, en el proyecto 1 de la tabla~\ref{tab:table2511}:}
+{También Tasa de Rendimiento Contable (\textit{Accounting Rate of Return}, ARR), ofrece una medida de rentabilidad juntando ganancias, costes y tiempo. El porcentaje representa la media de beneficios en relación a la inversión por unidad de tiempo.}
 
 \begin{equation}
-    x+ y = z
+    \text{ROI} = \frac{\text{average annual profit}}{\text{total investment}} \times 100
+\end{equation} \\
+
+{Por ejemplo, en el Proyecto 1 de la tabla~\nameref{tab:2.1}:}
+
+\begin{equation}
+    \text{ROI} = \frac{50.000/5}{100.000} \times 100 = 10\%
+\end{equation} \\
+
+{Lo que significaría que cada unidad de tiempo (año en este caso) se ganaría de media un 10\% de lo invertido.}
+
+\subsubsection{Valor actual neto}
+\label{2.5.4}
+
+{El Valor Actual Neto (\textit{Net Present Value}, NPV) se entiende mejor por partes. El valor presente en un año concreto se calcula con esta fórmula:}
+
+\begin{equation}
+    \text{Valor presente} = \frac{\text{valor en el año t}}{(1+r)^t}
+\end{equation} \\
+
+{Donde $r$ es el interés aplicado (valor entre 0 y 1), $t$ es el número de años en el que se espera conseguir dicha ganancia y el valor en el año $t$ suele ser el beneficio neto predicho para ese año (ver \nameref{2.5.1}). El significado de esta fórmula se ve mejor de otra manera:}
+
+\begin{equation}
+    \text{Valor presente} \times (1 + r)^t = \text{valor en el año t}
 \end{equation}
+
+{Donde se ve claramente que, lo que estamos haciendo, es ingresar un dinero en una cuenta de ahorros (valor presente) con un interés concreto ($1 + r$) y durante $t$ años para conseguir el valor en el año $t$. Esta fórmula da importancia al momento del ingreso, siendo mejor cuanto antes llegue, por el beneficio potencial que pueda dar. Sin embargo, al estar calculando no el valor en el año $t$ sino el valor presente, lo que se hace es lo contrario: poner de manifiesto que, cuanto más tarde lleguen los ingresos, menos beneficios potenciales se generarán en las cuentas de ahorros.} \\
+
+{En el libro, denomina \textbf{factor de descuento} al denominador de la fórmula original:}
+
+\begin{equation}
+    \text{Factor de descuento} = \frac{1}{(1+r)^t}
+\end{equation} \\
+
+{Finalmente, para sacar el Valor Actual Neto habría que sumar el valor presente de todos los años. Si aplicamos esto al Proyecto 1 de la tabla~\nameref{tab:2.1} con un interés del 10\% ($r = 0.1$):}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccrl}
+Año (t)                            & Cash-flow                     & \multicolumn{1}{c}{Factor de descuento} & \multicolumn{1}{c}{Valor presente} \\ \hline
+0 & -100.000,00 & 1,0    & -100.000,00 \\
+1 & 10.000,00   & 0,9091 & 9.091,00    \\
+2 & 10.000,00   & 0,8264 & 8.264,00    \\
+3 & 10.000,00   & 0,7513 & 7.513,00    \\
+4 & 20.000,00   & 0,683  & 13.660,00   \\
+5 & 100.000,00  & 0,6209 & 62.090,00   \\ \hline
+\multicolumn{1}{r}{Beneficio neto} & \multicolumn{1}{l}{50.000,00} & NPV                                     & 618,00                            
+\end{tabular}%
+}
+\caption{Valor Actual Neto}
+\label{tab:2.2}
+\end{table}
+
+\newpage
+\subsubsection{Tasa interna de retorno}
+\label{2.5.5}
+
+{La Tasa Interna de Retorno (\textit{Internal Rate of Return}, IRR) es una medida derivada del \nameref{2.5.4} en el que se busca calcular el interés $r$ que haga que el beneficio neto sea 0. Se usa sobre todo para comparar las rentabilidades de diferentes proyectos (cuanto mayor, mejor). El cálculo es complicado, se recomienda usar la función de Excel.}
+
+\subsection{Evaluación de riesgos}
+\label{2.6.0}
+
+{Aquí se verán solamente los riesgos a nivel de negocio, no del proyecto.}
+
+\subsubsection{Identificación y clasificación de riesgos}
+\label{2.6.1}
+
+{Se genera una matriz con cada riesgo y se evalúa su importancia y su probabilidad de ocurrir:}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lll}
+Riesgo                                         & Importancia & Probabilidad \\ \hline
+Pago online tiene problemas de seguridad       & M           & M            \\
+Costes de mantenimiento mayores de lo esperado & L           & L            \\
+Competidores recortan precios                  & H           & M            \\
+...                                            &             &             
+\end{tabular}
+\caption{Ejemplo de matriz de riesgos}
+\label{tab:2.3}
+\end{table}
+
+\subsubsection{Riesgo y valor actual neto}
+\label{2.6.2}
+
+{Cuando un proyecto es altamente arriesgado, se suele añadir un 2 o hasta un 5\% más de interés en el Valor Actual Neto.}
+
+\subsection{Gestión de programas}
+\label{2.7.0}
+
+{Grupo de proyectos (que puede ser un subconjunto de un portfolio) que son gestionados de una forma coordenada para obtener beneficios que no hubieran sido posible obtener si se llevaran a cabo por separado.}
+
+\subsubsection{Programas de ciclo de negocio}
+\label{2.7.1}
+
+{Colección de proyectos que coinciden en el año fiscal}
+
+\subsubsection{Programas estratégicos}
+\label{2.7.2}
+
+{Proyectos que coinciden en área, meta, etc.}
+
+\subsubsection{Programas de infraestructura}
+\label{2.7.3}
+
+{En empresas no dedicadas únicamente a TIC pero que tienen un departamento de informática, se agrupan los proyectos en programas de infraestructura.}
+
+\subsubsection{Programas de investigación y desarrollo}
+\label{2.7.4}
+
+{Proyectos de I+D+i.}
+
+\subsubsection{Asociaciones innovadoras}
+\label{2.7.5}
+
+{Conjunto de proyectos en los que se colabora con otra empresa.}
+
+\subsection[Gestionando la asociación de recursos en programas]{Gestionando la asociación de recursos en \\programas}
+\label{2.8.0}
+
+{Un gestor de proyectos siempre tendrá que lidiar con el gestor de programas, que tendrá más autoridad a la hora de asignar recursos a proyectos:}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c}
+Gestor de programas                                                    & Gestor de proyectos                                                       \\ \hline
+\begin{tabular}[c]{@{}c@{}}Muchos proyectos\\ simultáneos\end{tabular} & \begin{tabular}[c]{@{}c@{}}Un proyecto a\\ la vez\end{tabular}            \\
+\begin{tabular}[c]{@{}c@{}}Relación personal con\\ recursos habilidosos\end{tabular} & \begin{tabular}[c]{@{}c@{}}Relación impersonal\\ con los recursos\end{tabular}  \\
+\begin{tabular}[c]{@{}c@{}}Optimiza el uso de\\ recursos\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Minimiza la demanda\\ de recursos\end{tabular} \\
+\begin{tabular}[c]{@{}c@{}}Suele ver los\\ proyectos como\\ similares\end{tabular}   & \begin{tabular}[c]{@{}c@{}}Suele ver los\\ proyectos como\\ únicos\end{tabular}
+\end{tabular}
+\caption{Gestor de Programas contra Gestor de Proyectos}
+\label{tab:2.4}
+\end{table}
+
+
+%---------------------------------------------------
+% Seccion 3
+%---------------------------------------------------
+\newpage
+\section[Una revisión a la planificación de proyectos]{Una revisión a la planificación de \\proyectos}
+\label{3.0.0}
+
+\subsection{Introducción a la planificación de proyectos Step Wise}
+
+{Step Wise son los pasos básicos a seguir en la planificación de un proyecto.}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[width=\textwidth]{step_wise.png}
+    \caption{Step Wise}
+    \label{fig:3.1}
+\end{figure}
+
 
 %---------------------------------------------------
 % BIBLIOGRAFIA
