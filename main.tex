@@ -616,6 +616,248 @@ Gestor de programas                                                    & Gestor 
 
 
 %---------------------------------------------------
+% Seccion 4
+%---------------------------------------------------
+\newpage
+\section[Aproximación a la selección de proyecto apropiada]{Aproximación a la selección de\\proyecto apropiada}
+\label{4.0.0}
+
+
+%---------------------------------------------------
+% Seccion 5
+%---------------------------------------------------
+\newpage
+\section{Estimación del esfuerzo en Software}
+\label{5.0.0}
+
+
+%---------------------------------------------------
+% Seccion 6
+%---------------------------------------------------
+\newpage
+\section[Aproximación a la selección de proyecto apropiada]{Aproximación a la selección de\\proyecto apropiada}
+\label{6.0.0}
+
+
+%---------------------------------------------------
+% Seccion 7
+%---------------------------------------------------
+\newpage
+\section{Gestión del riesgo}
+\label{7.0.0}
+
+\subsection{Introducción}
+\label{7.1.0}
+
+{En esta sección se verá qué es un riesgo, cómo identificarlo y cómo gestionarlo mediante planificación.}
+
+\subsection{Riesgo}
+\label{7.2.0}
+
+{Según PM-BOK (Guía de los fundamentos para la dirección de proyectos), un riesgo es <<un evento incierto o condición que, de cumplirse, tiene un efecto positivo o negativo en los objetivos de un proyecto>>.} \\
+
+{Según PRINCE2, un riesgo es <<la posibilidad de exposición a las consecuencias adversas de eventos futuros>>.} \\
+
+{Un riesgo tiene dos puntos fundamentales: \textbf{está relacionado con el futuro} (a elementos previsibles o, a veces, a cosas obviadas) e \textbf{implica causa y efecto} (y hay que tener en cuenta ambos).}
+
+{La gestión de riesgos se lleva a cabo principalmente en los puntos 3 y 6 del \nameref{fig:3.1} (\hyperref[fig:3.1]{figura 3.1}). Al estar los planes basados en suposiciones, la gestión de riesgos se ocupa de planificar en caso de que estas suposiciones sean incorrectas.}
+
+\subsection{Categorías de riesgos}
+\label{7.3.0}
+
+{Para categorizar los riesgos, se utilizan las categorías usadas por Lyytinen-Mathiassen-Ropponen, que plantean estas 4:}
+
+\begin{itemize}
+    \item {\textbf{Actores}: riesgos que implican a las personas que rodean al proyecto.}
+    \item {\textbf{Tecnología}: riesgos sobre la tecnología usada en el proyecto.}
+    \item {\textbf{Estructura}: riesgos contenidos en el sistema y forma de gestión del proyecto.}
+    \item {\textbf{Tareas}: riesgos acerca de las tareas del proyecto.}
+\end{itemize}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=1.25]{images/Lyytinen-Mathiassen-Ropponen.png}
+    \caption{Marco de riesgos Lyytinen-Mathiassen-Ropponen}
+    \label{fig:7.1}
+\end{figure}
+
+\subsection{Un marco para tratar riesgos}
+\label{7.4.0}
+
+{Los riesgos se gestionan de la siguiente manera (se amplia en las siguientes gestiones):}
+
+\begin{enumerate}
+    \item {Identificación de riesgos}
+    \item {Análisis e identificación de riesgos}
+    \item {Planificación de riesgos}
+    \item {Monitorización de riesgos}
+\end{enumerate}
+
+{Los 3 primeros se repiten para encontrar varios riesgos. Si se encuentra alguno que pueda intervenir en el éxito de un proyecto, se crean planes para reducirlo o eliminarlo.} \\
+
+\subsection{Identificación de riesgos}
+\label{7.5.0}
+
+{Una opción es el \textbf{brainstorming}, donde los stakeholders se juntan y plantean posibles riesgos en común.} \\
+
+{Otra es la identificación casual o \textbf{casual mapping}, que consiste sencillamente en darse cuenta de qué puede afectar al proyecto.} \\
+
+{Otra es usar \textbf{checklists} o listas de riesgos ya existentes, ya sean de la compañía o de gente que haya hecho estudios, como el de Barry Bohem (1989).}
+
+{Según Barry Boehm, los 10 riesgos más comunes (en orden) son:}
+
+\begin{enumerate}
+    \item {\textbf{Falta de personal}: se reduce, por ejemplo, con una contratación de grandes talentos.}
+    \item {\textbf{Estimación de tiempo y costes poco realistas}: se reduce, por ejemplo, aplicando múltiples técnicas de estimación.}
+    \item {\textbf{Desarrollo de las funciones Software erróneas}: se reduce, por ejemplo, mediante prototipado.}
+    \item {\textbf{Desarrollo de las interfaces de usuario erróneas}: se reduce, por ejemplo, mediante prototipado.}
+    \item {\textbf{Chapado en oro}: se reduce, por ejemplo, mediante un análisis de coste-beneficio.}
+    \item {\textbf{Cambios tardíos en los requisitos}: se reduce, por ejemplo, mediante procedimientos estrictos de control de cambios.}
+    \item {\textbf{Déficit de componentes suministrados externamente}: se reduce, por ejemplo, mediante una formalización de especificaciones.}
+    \item {\textbf{Deficiencias en las tareas realizadas externamente}: se reduce, por ejemplo, procedimientos de garantía de calidad.}
+    \item {\textbf{Deficiencias de rendimiento en tiempo real}: se reduce, por ejemplo, mediante simulaciones.}
+    \item {\textbf{Desarrollo técnico demasiado difícil}: se reduce, por ejemplo, mediante análisis técnicos.}
+\end{enumerate}
+
+\subsection{Evaluación de riesgos}
+\label{7.6.0}
+
+{Una forma de evaluar los riesgos es calculando la \textbf{exposición al riesgo}, una unidad monetaria que se calcula de la siguiente manera:}
+
+\begin{equation}
+    \text{exposición al riesgo} = \text{daño potencial} \times \text{probabilidad del suceso}
+\end{equation}
+
+{Sin embargo, no todos los riesgos pueden ser medidos en unidades monetarias. También puede haber casos en los que el riesgo se mida en esfuerzo o tiempo. Ocurre también que muchos managers están en contra de cálculos tan precisos, y prefieren utilizar para el daño potencial y para la probabilidad del suceso escalas del 1 al 10, quedando la exposición en una escala del 1 al 100.} \\
+
+{Sea cual sea el cálculo, Boehm recomienda centrarse en los 10 riesgos con más exposición. Si el proyecto es pequeño, se puede centrar en una cantidad menor.} \\
+
+{A veces se hacen cálculos cualitativos para las dos variables de cálculo, siendo los valores posibles <<alto>>, <<significativo>>, <<moderado>> o <<bajo>>:}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+              & Daño potencial          & Probabilidad del suceso       \\ \hline
+Alto          & Mayor de 30\%           & Mayor de 50\%                 \\
+Significativo & 20-30\%                 & 30-50\%                       \\
+Moderado      & 10-19\%                 & 10-29\%                       \\
+Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hline
+              & Del gasto presupuestado & De probabilidad de que ocurra
+\end{tabular}%
+}
+\caption{Descriptores cualitativos}
+\label{tab:7.1}
+\end{table}
+
+{De esta manera se pueden situar los riesgos en una matriz y establecer una línea de tolerancia, por debajo de la cual no se considerarán los riesgos, y por encima de la cual se escogerán los 10 riesgos con mayor exposición:}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=1.25]{images/Matriz de exposición de riesgo.png}
+    \caption{Matriz de exposición al riesgo}
+    \label{fig:7.2}
+\end{figure}
+
+\newpage
+\subsection{Planificación de riesgos}
+\label{7.7.0}
+
+{Existen 5 estrategias principales de lidiar con riesgos:}
+
+\subsubsection{Aceptación del riesgo}
+\label{7.7.1}
+
+{El riesgo es menos costoso que el coste de cualquier mitigación. No se hace nada al respecto.}
+
+\subsubsection{\textit{Evitación} del riesgo}
+\label{7.7.2}
+
+{No se realiza la tarea que conlleva el riesgo, y así no existe la probabilidad de este riesgo.}
+
+\subsubsection{Reducción del riesgo}
+\label{7.7.3}
+
+{Se toman acciones que reducen la probabilidad del riesgo.}
+
+\subsubsection{Mitigación del riesgo}
+\label{7.7.4}
+
+{Se toman acciones que reducen el daño del riesgo.}
+
+\subsubsection{Transferencia del riesgo}
+\label{7.7.5}
+
+{La tarea que genera el riesgo es transferida a otra persona u organización.}
+
+\subsection{Gestión de riesgos}
+\label{7.8.0}
+
+\subsubsection{Contingencia}
+\label{7.8.1}
+
+{Un plan de contingencia es aquel que se lleva a cabo si un riesgo se materializa. Este puede conllevar unos costes de preparación y otros de realización.}
+
+\subsubsection{Decidiendo las acciones para cada riesgo}
+\label{7.8.2}
+
+{Todas las contramedidas llevadas a cabo deben ser rentables. Para medir esta rentabilidad, se usa la formula del \textbf{nivelado de la reducción de riesgo} (risk reduction leverage):}
+
+\begin{equation}
+    \text{nivelado de la reducción de riesgo} = \frac{\text{RE}_\text{antes} - \text{RE}_\text{después}}{\text{coste de la reducción de riesgo}}
+\end{equation}
+
+{Donde cada \textit{RE} es cada exposición al riesgo (\textit{Risk Exposure}) antes y después de la acción de reducción. Cualquier valor por encima de $1.00$ significa que la acción merece la pena.}
+
+\subsubsection{Crear y mantener un riesgo}
+\label{7.8.3}
+
+{Los riesgos se van anotando en registros que regularmente se revisan, actualizan en caso de cambios y corrigen. Si se establecen como <<cerrados>>, no se vuelven a revisar.}
+
+\subsection{Evaluación de riesgos para planificar}
+\label{7.9.0}
+
+{Desde aquí se asume que el riesgo es o tiene como resultado que una tarea termine más tarde de lo planificado. En estos casos, muchas veces se asume o espera que se compense el tiempo extra con tiempo de menos que tarde otra tarea. Sin embargo, los desarrolladores tienden a utilizar todo el tiempo ofrecido para la tarea.}
+
+\subsection{Aplicando PERT}
+\label{7.10.0}
+
+\subsubsection{Usando PERT para evaluar los efectos de la incertidumbre}
+\label{7.10.1}
+
+{PERT se utiliza para tener en cuenta la incertidumbre en las estimaciones de las duraciones de las tareas. Por ello, utiliza estas variables:}
+
+\begin{itemize}
+    \item {\textbf{Tiempo más probable} \textit{m}: el tiempo que se tardaría en realizar la tarea en circunstancias normales.}
+    \item {\textbf{Tiempo optimista} \textit{a}: el tiempo que menos se podría tardar en realizar la tarea.}
+    \item {\textbf{Tiempo pesimista} \textit{b}: el tiempo que más podría llevar la tarea.}
+\end{itemize}
+
+{Con esto, PERT ofrece una fórmula para la \textbf{duración esperada}:}
+
+\begin{equation}
+    t_e = \frac{a + 4m + b}{6}
+\end{equation}
+
+\subsubsection{Usando las duraciones esperadas}
+\label{7.10.2}
+
+{PERT ofrece dos cosas: la \textbf{fecha esperada de finalización} y la \textbf{duración esperada de cada tarea}. Es importante remarcar que en ambos casos es lo esperado, ya que tiene en cuenta la incertidumbre.}
+
+\subsubsection{Desviación estándar de las actividades}
+\label{7.10.3}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=1.25]{images/Red_PERT.jpg}
+    \caption{Ejemplo de red PERT}
+    \label{fig:7.3}
+\end{figure}
+
+%---------------------------------------------------
 % BIBLIOGRAFIA
 %---------------------------------------------------
 
