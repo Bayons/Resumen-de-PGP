@@ -757,7 +757,7 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 
 \begin{figure} [ht]
     \centering
-    \includegraphics[keepaspectratio=true, scale=1.25]{images/Matriz de exposición de riesgo.png}
+    \includegraphics[keepaspectratio=true, scale=1.00]{images/Matriz de exposición de riesgo.png}
     \caption{Matriz de exposición al riesgo}
     \label{fig:7.2}
 \end{figure}
@@ -850,12 +850,115 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 \subsubsection{Desviación estándar de las actividades}
 \label{7.10.3}
 
+{La desviación estándar da el grado de incertidumbre de la duración estimada. Su fórmula es:}
+
+\begin{equation}
+    s = \frac{b - a}{6}
+\end{equation}
+
+\subsubsection{Probabilidad de cumplir objetivos}
+\label{7.10.4}
+
+{PERT ofrece un método de cálculo de probabilidades de cumplir objetivos para cada tarea utilizando el z-valor y convirtiéndolo en una probabilidad (el libro no da muchos más detalles):}
+
+\begin{enumerate}
+    \item Se calcula la desviación estándar de cada evento.
+    \item Se calcula el z-valor para cada evento que tenga una fecha objetivo.
+    \item se convierte el z-valor en una probabilidad.
+\end{enumerate}
+
+\subsubsection{Cálculo de desviaciones para cada evento}
+\label{7.10.5}
+
+\begin{itemize}
+    \item {Para el tiempo en una cadena de eventos, se calcula la suma de tiempos de dichos eventos. Por ejemplo: $t_1 + t_2 + t_3$...}
+    \item {En caso de que haya varias formas de llegar al mismo evento, el tiempo final será el mayor de los valores. Por ejemplo, en \nameref{fig:7.3}, se puede llegar al nodo 5 a través de 1-3-5 o a través de 1-5, pero se coge el valor de 1-5 al ser mayor.}
+    \item {Para la desviación estándar en una cadena de eventos, se calcula la raíz cuadrada de la suma de los cuadrados. Por ejemplo: $\sqrt{s_1 + s_2 + s_3}$.}
+    \item {De nuevo, en caso de que haya varias formas de llegar al mismo evento, la desviación será el mayor de los valores. Por ejemplo, en \nameref{fig:7.3}, se escogería también el camino 1-5, al ofrecer el mayor de las desviaciones.}
+\end{itemize}
+
 \begin{figure} [ht]
     \centering
-    \includegraphics[keepaspectratio=true, scale=1.25]{images/Red_PERT.jpg}
+    \includegraphics[keepaspectratio=true, scale=1.0]{images/Red_PERT.jpg}
     \caption{Ejemplo de red PERT}
     \label{fig:7.3}
 \end{figure}
+
+\subsubsection{Cálculo del z-valor}
+\label{7.10.6}
+
+\begin{equation}
+    z = \frac{T - t_e}{s}
+\end{equation}
+
+{Donde $T$ es la fecha objetivo, $t_e$ es el valor esperado y $s$ es la desviación. El z-valor puede dar valores negativos, y estos dan la mayor probabilidad de no cumplir la fecha objetivo (atrasado).}
+
+\subsubsection{Ventajas de PERT}
+\label{7.10.7}
+
+{PERT se centra en la incertidumbre de las previsiones y permite establecer un ránking de las tareas con mayor incertidumbre para vigilarlas más de cerca.}
+
+\subsection{Simulación de Montecarlo}
+\label{7.11.0}
+
+{La simulación de Montecarlo es una simulación realizada por ordenador que es capaz de calcular infinitas posibilidades a partir de una serie de variables. Se utiliza para trabajos de investigación, pero también vale para calcular el riesgo de no cumplir los objetivos.}
+
+\subsection{Concepto de cadena crítica}
+\label{7.12.0}
+
+{Generalmente, se espera que las finalizaciones tempranas de tareas ofrezcan tiempo extra al proyecto. Sin embargo, por la ley de Parkinson, se sabe que por lo general esto no va a ocurrir.} \\
+
+{La \textbf{cadena crítica} es la cadena de actividades más larga del proyecto, teniendo en cuenta dependencias de tareas y recursos. Es importante \textbf{no confundirla con el camino crítico}, que solo tiene en cuenta dependencias de tareas.}
+
+\subsubsection{Derivación de la duración de las tareas <<más probables>>}
+\label{7.12.1}
+
+{La planificación de cadenas críticas suele situar la fecha objetivo de una de estas como aquella con un 50\% de probabilidades de tener éxito. Algunos gestores suelen dividir a la mitad el tiempo estimado o reducirlo un 33\%, dado que esto suele ofrecer más probabilidades de terminar a tiempo la cadena. Sin embargo, esto desmotiva a los trabajadores.}
+
+\subsubsection{Uso de los inicios más tardíos para actividades}
+\label{7.12.2}
+
+{A veces se retrasa los proyectos hasta su inicio más tardío para que no se pueda añadir a sus trabajadores a otros proyectos. Otros argumentan que son los trabajadores los que tienden a empezar en el inicio más tardío.}
+
+\subsubsection{Insertando \textit{buffers} de proyecto y de alimentación}
+\label{7.12.3}
+
+{Para lidiar con sobrepasos de tiempo, a veces se reduce a la mitad todas las zonas de confort de la cadena crítica y se juntan en un solo tiempo al final del proyecto llamado \textbf{\textit{buffer} de proyecto}. Así, si una actividad de la cadena crítica retrasa el proyecto, este se aplazará dentro del \textit{buffer} del proyecto.} \\
+
+{Otra forma de calcular el \textit{buffer} de proyecto es mediante la raíz cuadrada de la suma de los cuadrados de las zonas de confort ($\sqrt{t_1^2 + t_2^2 + t_3^2...}$), basado en las desviaciones típicas. Este cálculo tiene en cuenta la compensación de la duración de las tareas (las terminadas pronto compensa las terminadas tarde).} \\
+
+{El \textbf{\textit{buffer} de alimentación} trata de hacer lo mismo que el de proyecto pero con cadenas de tareas que no pertenezcan a la cadena crítica (cadenas de alimentación). Se suelen colocar donde la cadena de alimentación se una a la cadena crítica y se calcula igual que el \textit{buffer} de proyecto.}
+
+\subsubsection{Ejecución del proyecto}
+\label{7.12.4}
+
+{Puntos clave al ejecutar el proyecto:}
+
+\begin{itemize}
+    \item {Las cadenas de tareas no deben comenzarse antes de tiempo, pero una vez comenzadas deben terminar lo antes posible.}
+    \item {Los \textit{buffers} se dividen en 3 zonas iguales:}
+    
+    \begin{itemize}
+        \item {\textbf{verde}: no hay que aplicar ninguna estrategia.}
+        \item {\textbf{ámbar}: conviene formular un plan de acción.}
+        \item {\textbf{rojo}: se ejecuta el plan de acción.}
+    \end{itemize}
+\end{itemize}
+
+{A la planificación de cadenas críticas se le puede sumar dos conceptos complementarios que aseguren la gestión del proyecto:}
+
+\begin{itemize}
+    \item {\textbf{El cálculo de dos estimaciones}: la duración más probable y la duración segura (tiempo que se tarda en resolver los problemas y en finalizar la tarea).}
+    \item {\textbf{Colocar tiempos de contingencia} (que viene de calcular la duración segura menos la duración más probable) en un \textit{buffer} en lugar de asignarlos a cada actividad.}
+\end{itemize}
+
+
+%---------------------------------------------------
+% Seccion 8
+%---------------------------------------------------
+\newpage
+\section{Asignación de recursos}
+\label{8.0.0}
 
 %---------------------------------------------------
 % BIBLIOGRAFIA
@@ -863,6 +966,7 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 
 \newpage
 \section{Única bibliografía}
+\label{bibliografia}
 \nocite{*}
 \begingroup
 \renewcommand{\section}[2]{}%
