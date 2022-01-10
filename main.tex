@@ -635,7 +635,7 @@ Gestor de programas                                                    & Gestor 
 % Seccion 6
 %---------------------------------------------------
 \newpage
-\section[Aproximación a la selección de proyecto apropiada]{Aproximación a la selección de\\proyecto apropiada}
+\section{Planificación de actividades}
 \label{6.0.0}
 
 
@@ -658,14 +658,14 @@ Gestor de programas                                                    & Gestor 
 
 {Según PRINCE2, un riesgo es <<la posibilidad de exposición a las consecuencias adversas de eventos futuros>>.} \\
 
-{Un riesgo tiene dos puntos fundamentales: \textbf{está relacionado con el futuro} (a elementos previsibles o, a veces, a cosas obviadas) e \textbf{implica causa y efecto} (y hay que tener en cuenta ambos).}
+{Un riesgo tiene dos puntos fundamentales: \textbf{está relacionado con el futuro} (a elementos previsibles o, a veces, a cosas obviadas) e \textbf{implica causa y efecto} (y hay que tener en cuenta ambos).} \\
 
 {La gestión de riesgos se lleva a cabo principalmente en los puntos 3 y 6 del \nameref{fig:3.1} (\hyperref[fig:3.1]{figura 3.1}). Al estar los planes basados en suposiciones, la gestión de riesgos se ocupa de planificar en caso de que estas suposiciones sean incorrectas.}
 
 \subsection{Categorías de riesgos}
 \label{7.3.0}
 
-{Para categorizar los riesgos, se utilizan las categorías usadas por Lyytinen-Mathiassen-Ropponen, que plantean estas 4:}
+{Para categorizar los riesgos, se utilizan las categorías usadas por Lyytinen, Mathiassen y Ropponen, que plantean estas 4:}
 
 \begin{itemize}
     \item {\textbf{Actores}: riesgos que implican a las personas que rodean al proyecto.}
@@ -681,10 +681,11 @@ Gestor de programas                                                    & Gestor 
     \label{fig:7.1}
 \end{figure}
 
+\newpage
 \subsection{Un marco para tratar riesgos}
 \label{7.4.0}
 
-{Los riesgos se gestionan de la siguiente manera (se amplia en las siguientes gestiones):}
+{Los riesgos se gestionan de la siguiente manera (se amplia en las siguientes secciones):}
 
 \begin{enumerate}
     \item {Identificación de riesgos}
@@ -920,6 +921,7 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 
 {A veces se retrasa los proyectos hasta su inicio más tardío para que no se pueda añadir a sus trabajadores a otros proyectos. Otros argumentan que son los trabajadores los que tienden a empezar en el inicio más tardío.}
 
+\newpage
 \subsubsection{Insertando \textit{buffers} de proyecto y de alimentación}
 \label{7.12.3}
 
@@ -959,6 +961,163 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 \newpage
 \section{Asignación de recursos}
 \label{8.0.0}
+
+\subsection{Introducción}
+\label{8.1.0}
+
+{Durante la asignación de recursos (paso 7 del \nameref{fig:3.1}), se pretende enlazar los recursos disponibles con el plan de actividades, cambiando este último de ser necesario para ajustarse a los recursos. El resultado final de la asignación de recursos será:}
+
+\begin{itemize}
+    \item {El esquema de actividades.}
+    \item {Un esquema de recursos que muestre cuándo y dónde se utiliza cada recurso.}
+    \item {Un esquema de costes que muestre el gasto acumulado por recurso y tiempo.}
+\end{itemize}
+
+\subsection{La naturaleza de los recursos}
+\label{8.2.0}
+
+{Un recurso es un elemento o persona requerida para la ejecución de un proyecto. Los recursos se clasifican en 7 categorías:}
+
+\begin{itemize}
+    \item {\textbf{Laboral}: aquí pertenecen los trabajadores, tanto desarrolladores como otros equipos o incluso clientes que estén involucrados en el proyecto.}
+    \item {\textbf{Equipamiento}: estaciones de trabajo, equipo de oficina, ordenadores, sillas, mesas...}
+    \item {\textbf{Materiales}: elementos que serán <<consumidos>> para llevar a cabo el proyecto (CD's donde se graba el Software a vender, hardware, etc.).}
+    \item {\textbf{Espacio}: oficinas, despachos, salas de reuniones...}
+    \item {\textbf{Servicios}: en algunos proyectos se necesitan servicios especializados (alquiler y manutención de dominios, servicios de telecomunicaciones, etc.).}
+    \item {\textbf{Tiempo}: recurso que se pretende reducir mediante el uso del resto de recursos.}
+    \item {\textbf{Dinero}: recurso secundario usado para conseguir recursos y consumido por el uso de los mismos.}
+\end{itemize}
+
+\subsection{Identificación de recursos necesarios}
+\label{8.3.0}
+
+{El primer paso para la asignación de recursos es repasar las actividades del proyecto y listar qué recurso necesita cada actividad. Algunos recursos no serán específicos de actividades sino de la infraestructura del proyecto o incluso habrá recursos que se necesiten para apoyar otros recursos.}
+
+\subsection{Planificación de recursos}
+\label{8.4.0}
+
+{Una vez se tienen listados los recursos necesarios, hay que enlazar esta lista con la de tareas para distribuir los recursos. Esto se puede ver en el ejemplo del libro (figura~\ref{fig:8.1}).}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=0.50]{images/Histograma_y_actividades.jpg}
+    \caption{Ejemplo de histograma de recursos}
+    \label{fig:8.1}
+\end{figure}
+
+\newpage
+{Cambiar la cantidad de recursos durante el tiempo también añade costes al proyecto. Conviene mantener los mismos recursos durante el proyecto y evitar sobrecargas sobre recursos. Esto se ve representado en el histograma: si existen picos o valles en el histograma, es que se están aprovechando mal los recursos (cada fila es un recurso distinto). Un histograma perfecto debe ser liso (o suave, la traducción es ambigua), lo que implicaría una repartición correcta de los recursos.}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=0.75]{images/Suavizado_de_histograma.png}
+    \caption{Histograma alisado}
+    \label{fig:8.2}
+\end{figure}
+
+{Para lograr el alisado, se pueden atrasar las fechas de inicio de algunas actividades (que tengan zona de confort) o incluso dividirlas en partes, aunque en proyectos de software, no siempre es posible dividir actividades sin aumentar el tiempo que llevan. Otra técnica usada para lograr el alisado es que, actividades que necesiten varios trabajadores, utilicen 1 y aumente su duración (así se evita acumular trabajadores en una sola tarea).} \\
+
+{En caso de que no se consiga alisar el histograma, resulta muy útil priorizar actividades. Casi siempre se va a priorizar aquella actividad que esté en el camino crítico. Existen dos estrategias útiles:}
+
+\begin{itemize}
+    \item {\textbf{Prioridad por flotabilidad total}: a menos flotabilidad, más prioridad. Es recomendable recalcular las flotabilidades cada vez que se retrase un proyecto.}
+    \item {\textbf{Prioridad por lista ordenada}: se basa en ordenarlas según criterios como el de la lista de prioridades de \textbf{Burman}:}
+    
+    \begin{enumerate}
+        \item \textbf{Actividad crítica más corta}
+        \item \textbf{Actividad crítica}
+        \item \textbf{Actividad no crítica más corta}
+        \item \textbf{Actividad no crítica con menos flotabilidad}
+        \item \textbf{Actividad no crítica}
+    \end{enumerate}
+    
+\end{itemize}
+
+{Si aún así no se puede alisar el histograma, hay que considerar ampliar los recursos o cambiar los métodos de trabajo.}
+
+\subsection{Creación de caminos críticos}
+\label{8.5.0}
+
+{Al asignar recursos y/o alisar el histograma se pueden generar nuevos caminos críticos. La técnica comentada en \ref{8.4.0} de atrasar fechas de inicio puede crear actividades críticas si consume toda la flotabilidad. También puede ocurrir que se retrase la disponibilidad de un recurso si este se retrasa en una tarea.}
+
+\subsection{Cálculo del coste}
+\label{8.6.0}
+
+{Algunas acciones durante el asignado de recursos acarrearán costes. Habrá que considerar si estos son más baratos que retrasar la entrega del proyecto o que no cumplir las fechas.}
+
+\subsection{Siendo específicos}
+\label{8.7.0}
+
+{En los proyectos de software, la experiencia individual de cada miembro cuenta para el proyecto. Asignar pronto al personal nos puede ayudar a reestimar mejor la duración de las actividades según su habilidad.} \\
+
+{Algunos factores a tener en cuenta en cuanto a la asignación de personal específico:}
+
+\begin{itemize}
+    \item {\textbf{Disponibilidad}: es necesario saber la disponibilidad de cada empleado.}
+    \item {\textbf{Criticidad}: los empleados más experimentados pueden reducir la duración del proyecto.}
+    \item {\textbf{Riesgo}: los empleados más experimentados pueden reducir la incertidumbre de las actividades que impliquen más riesgo.}
+    \item {\textbf{Entrenamiento}: las actividades menos críticas pueden ser llevadas por los empleados menos experimentados y pueden ayudarles a desarrollar habilidades. También son más baratos.}
+    \item {\textbf{Team building}: la selección según sus perfiles puede ser útil para mejorar la colaboración del equipo (capítulo~\ref{12.0.0}).}
+\end{itemize}
+
+\subsection{Publicación de la planificación de recursos}
+\label{8.8.0}
+
+{Las planificaciones de recursos se suelen publicar como en la figura~\ref{fig:8.3}. Estas no cuentan con días no productivos (días festivos, vacaciones, bajas, etc.). Después de esta publicación se transfiere la información a la red de precedencia para corregir la planificación de actividades.}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=0.75]{images/plan_de_recursos.png}
+    \caption{Planificación de recursos}
+    \label{fig:8.3}
+\end{figure}
+
+\subsection{Planificación de costes}
+\label{8.9.0}
+
+{Se realiza un desglose detallado de costes clasificado por:}
+
+\begin{itemize}
+    \item {\textbf{Costes de personal}: salarios y costes directos de contratación.}
+    \item {\textbf{Gastos de administración}: gastos generales de la empresa que no pueden ser directamente relacionados con el proyecto.}
+    \item {\textbf{Cargos por uso}: costes que tengan una relación directa con el uso.}
+\end{itemize}
+
+\subsection{Secuencia de planificado}
+\label{8.10.0}
+
+{Cualquier cambio al plan de actividades afectará al de asignación de recursos y viceversa, e igualmente afectará un cambio en cualquiera de estos dos en la evaluación de riesgos y en la planificación de costes. Una buena planificación de proyectos será capaz de demostrar los cambios que generará cada cambio y de mantener una buena sincronía entre todos estos esquemas. La experiencia y habilidad del gestor de proyectos también serán de gran utilidad.}
+
+%---------------------------------------------------
+% Seccion 9
+%---------------------------------------------------
+\newpage
+\section{Monitorización y control}
+\label{9.0.0}
+
+
+%---------------------------------------------------
+% Seccion 10
+%---------------------------------------------------
+\newpage
+\section{Gestión de contratos}
+\label{10.0.0}
+
+
+%---------------------------------------------------
+% Seccion 11
+%---------------------------------------------------
+\newpage
+\section{Gestión de personas en entornos de software}
+\label{11.0.0}
+
+
+%---------------------------------------------------
+% Seccion 12
+%---------------------------------------------------
+\newpage
+\section{Trabajo en equipos}
+\label{12.0.0}
 
 %---------------------------------------------------
 % BIBLIOGRAFIA
