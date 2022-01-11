@@ -1349,6 +1349,116 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 \section{Gestión de contratos}
 \label{10.0.0}
 
+\subsection{Introducción}
+\label{10.1.0}
+
+{Este tema tratará sobre la contratación de recursos y servicios externos. Es necesario, en estos contratos, dejar claro desde el principio los requisitos y asegurarse de que los bienes y servicios son entregados correctamente.}
+
+\subsection{Tipos de contratos}
+\label{10.2.0}
+
+{Un recurso externo podría ser un servicio, como personal temporal, o un sistema completo. En caso de este último, hay 3 casos distintos:}
+
+\begin{itemize}
+    \item {Creación de un \textbf{sistema a medida} (\textit{bespoke system}).}
+    \item {Contratación de un sistema existente u \textbf{\textit{off-the-shelf}} (OTS).}
+    \item {Contratación de un sistema existente personalizado o \textbf{\textit{customized off-the-shelf}} (COTS).}
+\end{itemize}
+
+{En caso de ofrecer software legalmente se entiende que se ofrece un servicio. También se ofrece una licencia de uso en ciertos casos.} \bigskip
+
+{Otra forma de clasificar los contratos es por el método de pago: contratos de precio fijo, contratos por tiempo y material y contratos de precio fijo por unidad entregada.}
+
+\subsubsection{Contratos de precio fijo}
+\label{10.2.1}
+
+{Se fija un precio en el contrato que será pagado al finalizar el proyecto. Los requisitos del cliente estarán fijados desde el inicio, y cambiarlos requerirá una renegociación.}
+
+\begin{itemize}
+    \item Ventajas:
+    
+    \begin{itemize}
+        \item El cliente conoce el precio.
+        \item El proveedor trabajará lo más rápido posible por rentabilidad.
+    \end{itemize}
+    
+    \item Desventajas:
+    
+    \begin{itemize}
+        \item El proveedor absorberá cualquier error en la estimación. El coste de este riesgo estará reflejado en el precio.
+        \item Será costoso cambiar requisitos durante el desarrollo.
+        \item El proveedor puede pedir grandes precios por cualquier cambio en los requisitos.
+        \item La calidad puede verse afectada.
+    \end{itemize}
+    
+\end{itemize}
+
+\subsubsection{Contratos por tiempo y material}
+\label{10.2.2}
+
+{Se establece un precio por unidad de esfuerzo, generalmente por hora de personal usada.}
+
+\begin{itemize}
+    \item Ventajas:
+    
+    \begin{itemize}
+        \item Flexibiliza cambios en los requisitos.
+        \item Promueve la calidad en el producto final.
+    \end{itemize}
+    
+    \item Desventajas:
+    
+    \begin{itemize}
+        \item El cliente absorberá cualquier error en los requisitos.
+        \item El proveedor no tiene incentivos de rentabilidad para terminar pronto.
+    \end{itemize}
+    
+\end{itemize}
+
+\subsubsection{Contratos de precio fijo por unidad entregada}
+\label{10.2.3}
+
+{Se miden los puntos de función del proyecto (capítulo~\ref{5.0.0}), se crea una tabla de precios y se fija un precio por cada punto de función. El precio crecerá dependiendo del número de puntos de función (como se puede ver en el \nameref{tab:10.1} de la tabla \ref{tab:10.1}: un proyecto que tuviese 2200FP se calcularía como $(2000\times967) + (200\times1019) = 2137800€$). En estos contratos, las adiciones en el alcance se cobran también usando la tabla: un nuevo requisito en el ejemplo anterior que tenga 100FP costaría a mayores $100\times1019=101900€$.}
+
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llll}
+\hline
+Puntos de función (FP) & Coste de diseño por FP & Coste de implementación por FP & Coste total \\ \hline
+Hasta 2000             & 242€                   & 725€                           & 967€        \\
+2001-2500              & 255€                   & 764€                           & 1019€       \\
+2501-3000              & 265€                   & 793€                           & 1058€       \\
+Desde 3000             & 284€                   & 850€                           & 1134€       \\ \hline
+\end{tabular}%
+}
+\caption{Ejemplo de cálculo de precios}
+\label{tab:10.1}
+\end{table}
+
+{Cuando se aplica este tipo de contrato se suele negociar de manera independiente cada etapa del proyecto, haciendo contratos independientes para cada etapa.}
+
+\begin{itemize}
+    \item Ventajas:
+    
+    \begin{itemize}
+        \item El cliente comprende los costes de cada cambio.
+        \item Permite comparar precios.
+        \item El proveedor no carga con el riesgo de que la funcionalidad crezca.
+        \item El proveedor tiene incentivos de rentabilidad.
+        \item No todos los requisitos necesitan estar definidos desde el inicio.
+    \end{itemize}
+    
+    \item Desventajas:
+    
+    \begin{itemize}
+        \item Las medidas de Software no siempre son fidedignas.
+        \item Algunos cambios pedidos por el cliente pueden requerir mucho esfuerzo pero mantener los FP totales del proyecto intactos.
+    \end{itemize}
+    
+\end{itemize}
+
+{Otra forma de clasificar los contratos es según el enfoque que se utiliza en la selección del contratista: abierta, restringida o negociada.}
 
 %---------------------------------------------------
 % Seccion 11
