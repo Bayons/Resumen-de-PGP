@@ -61,7 +61,7 @@ Cuarto Curso}}
 
 \vfill
 \centering
-{\fontsize{16pt}{1cm}\selectfont \textbf{Resumen del Libro de la Asignatura <<Planificación y Gestión de Proyectos>>: Software Project Management}}
+{\fontsize{16pt}{1cm}\selectfont \textbf{Resumen de los Apuntes de la Asignatura <<Planificación y Gestión de Proyectos>>}}
 
 
 \vfill
@@ -234,7 +234,7 @@ Bayón Sanz, Miguel
 \subsection{Business case o Caso de negocio}
 \label{1.11.0}
 
-{El Business case forma parte del estudio de viabilidad y consiste en un análisis coste-beneficio y cuándo se conseguirá ese beneficio.} \bigskip
+{El Business case forma parte del estudio de viabilidad y consiste en un análisis contrastado de coste-beneficio y cuándo se conseguirá ese beneficio.} \bigskip
 
 {Los planes de proyecto deben asegurarse de que el Business case se mantiene intacto.}
 
@@ -602,7 +602,7 @@ Gestor de programas                                                    & Gestor 
 \section[Una revisión a la planificación de proyectos]{Una revisión a la planificación de \\proyectos}
 \label{3.0.0}
 
-\subsection{Introducción a la planificación de proyectos Step Wise}
+\subsection[Introducción a la planificación de proyectos Step Wise]{Introducción a la planificación de proyectos \\Step Wise}
 
 {Step Wise son los pasos básicos a seguir en la planificación de un proyecto.}
 
@@ -1100,6 +1100,247 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 \section{Monitorización y control}
 \label{9.0.0}
 
+\subsection{Introducción}
+\label{9.1.0}
+
+{Una vez comienza el proyecto, se debe recoger información sobre los avances para compararlos con la planificación. Aquí se tratará cómo se recoge la información y qué decisiones tomar para cumplir con las fechas.}
+
+\subsection{Creación del marco de trabajo}
+\label{9.2.0}
+
+{La monitorización hay que ejecutarla de manera regular para encontrar qué ocurre y compararlo con los objetivos. Si no se están cumpliendo, hay que replantear la planificación o, en algunos casos, replantear los objetivos.} \bigskip
+
+{Generalmente, al monitorizar se vigilan \textbf{atrasos} en fechas de objetivos, déficits de \textbf{calidad}, \textbf{funcionalidad no adecuada} y \textbf{sobrecostes}.}
+
+\subsubsection{Responsabilidad}
+\label{9.2.1}
+
+{La responsabilidad general de asegurar un progreso satisfactorio en el proyecto es del \textbf{comité de dirección de proyecto} (\textit{project steering comittee}). La diaria recae en el \textbf{director del proyecto} y, salvo en los proyectos más pequeños que tienen un solo equipo por proyecto, algunos aspectos pueden delegarse en los \textbf{jefes de equipo}.} \bigskip
+
+{Los informes se realizan de manera regular y ascendente en la jerarquía de manera oral o escrita, formal o informal y periódico o ad hoc.}
+
+\subsubsection{Evaluación del progreso}
+\label{9.2.2}
+
+{La información debe ser objetiva y tangible siempre que se pueda. A veces la información estará basada en tareas parcialmente completadas.}
+
+\subsubsection{Estableciendo puntos de control}
+\label{9.2.3}
+
+{Habrá puntos de control periódicos (mensuales por ejemplo) o atados a eventos del proyecto.}
+
+\subsubsection{Tomando \textit{snapshots}}
+\label{9.2.4}
+
+{La frecuencia de los informes dependerá del tamaño y riesgo del proyecto. Además, a mayor rango en jerarquía, menor frecuencia y detalle tendrán estos informes. A nivel de desarrollador, sin embargo, se aconseja que sea \textbf{semanal}. A niveles superiores (información al comité de dirección de proyecto), los informes suelen enviarse en puntos particulares de la vida del proyecto conocidos como \textbf{puntos de control} o puntos de revisión.}
+
+\subsection{Recogiendo información}
+\label{9.3.0}
+
+{Es necesario recoger información tanto de tareas completas como parcialmente completas (y cuánto puede quedar). Para estimar cuánto queda para estas, a veces se usan \textit{productos intermedios} (como la primera compilación, por ejemplo) para determinar el avance.}
+
+\subsubsection{Informes de finalización parcial}
+\label{9.3.1}
+
+{Para determinar el tiempo trabajado en una tarea y poder estimar el tiempo restante, se suelen usar las fichas de tiempo (\textit{time sheets}), donde el empleado apunta el tiempo (generalmente en horas) que ha dedicado a cada actividad durante la semana completa.}
+
+\subsubsection{Informes RAG (\textit{Red}/\textit{Amber}/\textit{Green})}
+\label{9.3.2}
+
+{Para evitar preguntar por las fechas de compleción estimadas para una actividad, a veces se usa la estimación \textbf{RAG}, una estimación cualitativa basada en semáforos que consiste en dividir una actividad en tareas, señalarlas con estos tres colores para determinar si <<entra en la fecha objetivo>> (verde), <<no entra pero es recuperable>> (ámbar) o <<no entra y dificilmente se puede recuperar>> (rojo) y estimar a partir de estos una evaluación general para la actividad.}
+
+\subsection{Visualización del progreso}
+\label{9.4.0}
+
+\subsubsection{Diagrama de Gantt}
+\label{9.4.1}
+
+{El diagrama de Gantt muestra mediante barras de actividades la fecha programada para la actividad, la duración (a menudo junto con la flotabilidad) y el progreso (coloreando la barra hasta donde se estima que está completado).}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=0.75]{images/Gantt.png}
+    \caption{Diagrama de Gantt}
+    \label{fig:9.1}
+\end{figure}
+
+\subsubsection{Diagrama de deslizamiento o \textit{slip chart}}
+\label{9.4.2}
+
+{Igual que el diagrama de Gantt pero la línea que indica la fecha actual se <<tuerce>> hacia el punto de compleción de cada tarea. Una barra muy torcida indica la necesidad de replanificación.}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=0.75]{images/slip_chart.png}
+    \caption{\textit{Slip chart}}
+    \label{fig:9.2}
+\end{figure}
+
+\subsubsection{Cronograma o \textit{timeline}}
+\label{9.4.3}
+
+{Muestra de manera gráfica la variación en las fechas objetivo durante la vida del proyecto. Las líneas que bajan indican el avance de cada tarea hasta que tocan la diagonal, que es la fecha donde terminan. Su evaluación tras la finalización del proyecto puede delatar fallos en el proceso de estimación.}
+
+\begin{figure} [ht]
+    \centering
+    \includegraphics[keepaspectratio=true, scale=0.75]{images/timeline_chart.png}
+    \caption{\textit{Timeline}}
+    \label{fig:9.3}
+\end{figure}
+
+\subsection{Monitorización de costes}
+\label{9.5.0}
+
+{Mediante un diagrama de gastos acumulativos se puede ver la diferencia entre los gastos planeados y los reales. Puede indicar si un proyecto va atrasado (sus costes son menores que los planeados). A la línea de gasto real se le puede añadir el gasto esperado (basado en las actividades sin completar) para estimar una fecha de finalización de proyecto revisada.}
+
+\subsection{Análisis del valor ganado (\textit{Earned Value})}
+\label{9.6.0}
+
+{A cada tarea del proyecto, se le asigna un valor basado en la estimación original de gastos. A este se le llama \textbf{\textit{Planned Value}} (PV) o \textbf{\textit{Budgeted Cost of Work Scheduled}} (BCWS). Una tarea sin comenzar tiene un \textbf{\textit{Earned Value}} (EV) o \textbf{\textit{Budgeted Cost of Work Performed}} (BCWP) de cero, y cuando se completa su EV es igual a su PV.} \bigskip
+
+{Cuando una tarea esta a medias y no hay forma exacta de determinar el porcentaje que se ha completado, se determina su EV de distintas maneras:}
+
+\begin{itemize}
+    \item \textbf{0/100}: la tarea vale el 0\% de su PV cuando se comienza y el 100\% cuando se termina.
+    \item \textbf{50/50}: la tarea vale el 50\% de su PV cuando se comienza y suma el 50\% restante cuando se termina.
+    \item \textbf{75/25}: la tarea vale el 75\% de su PV cuando se comienza y suma el 25\% restante cuando se termina.
+    \item \textbf{Técnica del milestone}: la tarea recibe su valor basado en los hitos que se completen.
+    \item \textbf{Porcentaje completo}: la tarea se puede medir objetivamente y se calcula su porcentaje.
+\end{itemize}
+
+{Se recomienda usar la técnica 0/100 en todos los casos en que no se pueda medir el avance.}
+
+\subsubsection{Presupuesto base}
+\label{9.6.1}
+
+{El presupuesto base (baseline) es el gasto planteado en el plan de proyecto inicial y muestra el PV a través del tiempo (muchas veces medido en horas/hombre).}
+
+\subsubsection{Monitorizando el EV}
+\label{9.6.2}
+
+{Una vez dibujado el presupuesto base, se va dibujando el progreso del EV por días según se completen las tareas. También se va grabando el \textbf{\textit{Actual Cost}} (AC) o coste real, también llamado \textbf{\textit{Actual Cost of Work Performed}} (ACWP).}
+
+\subsubsection{Desviación del programa o \textit{Schedule Variance} (SV)}
+\label{9.6.3}
+
+{La desviación del programa se calcula como $SV = EV - PV$. Muestra la desviación del valor planeado en una fecha concreta.}
+
+\subsubsection{Desviación del tiempo o \textit{Time Variance} (TV)}
+\label{9.6.4}
+
+{Si $T_p$ es la fecha en la que se planeaba conseguir un PV concreto y $T_a$ la fecha en la que se consigue ese valor como EV, $TV$ se calcula como $TV = T_a - T_p$. Muestra la diferencia de tiempo en conseguir un valor concreto. Si es negativo, significa que se está tardando más de lo planeado.}
+
+\subsubsection{Desviación de coste o \textit{Cost Variance} (CV)}
+\label{9.6.5}
+
+{La desviación de coste se calcula como $CV = EV - AC$. Muestra la diferencia entre el valor ganado hasta un punto del proyecto y el coste real para conseguir dicho avance en ese punto.}
+
+\subsubsection{Ratios de rendimiento}
+\label{9.6.6}
+
+{Existen dos importantes:}
+
+\begin{itemize}
+    \item {\textbf{\textit{Cost Performance Index}} o índice de rendimiento de costes}
+    \begin{itemize}
+        \item $CPI=EV/AC$
+        \item da un ratio relacionado con el Cost Variance
+    \end{itemize}
+    
+    \item {y el \textbf{\textit{Schedule Performance Index}} o índice de rendimiento de programa }
+    \begin{itemize}
+        \item $SPI=EV/PV$
+        \item da un ratio relacionado con el Schedule Variance
+    \end{itemize}
+\end{itemize}
+
+{Ambos ratios son favorables si dan un valor mayor que 1.}
+
+\subsection{Prioridades de monitorización}
+\label{9.7.0}
+
+{Al monitorizar hay que prestar atención siguiendo este orden:}
+
+\begin{enumerate}
+    \item {\textbf{Actividades del camino crítico}.}
+    \item {\textbf{Actividades sin flotabilidad}.}
+    \item {\textbf{Actividades con flotabilidad menor} a una especificada por el director de proyectos.}
+    \item {\textbf{Actividades con alto riesgo}.}
+    \item {\textbf{Actividades que usen recursos críticos}.}
+\end{enumerate}
+
+\subsection{Devolviendo el proyecto a su fecha objetivo}
+\label{9.8.0}
+
+{Si ocurren eventos inesperados o retrasos, el director de proyecto debe reorganizar las tareas del proyecto asegurando (o intentando) que la fecha objetivo permanezca intacta. Existen dos estrategias principales: \textbf{acortar el camino crítico} y \textbf{modificar los requisitos de precedencia} de actividades.}
+
+\subsubsection{Acortar el camino crítico}
+\label{9.8.1}
+
+{Estrategias posibles:}
+
+\begin{itemize}
+    \item {Añadir recursos (especialmente personal)}
+    \item {Incrementar el uso de los recursos actuales}
+    \item {Reasignar personal al camino crítico}
+    \item {Reducir el alcance (eliminando funcionalidades)}
+    \item {Reducir la calidad}
+\end{itemize}
+
+{Acortar el camino crítico a veces causa que otros caminos se vuelvan críticos.}
+
+\subsubsection{Reconsiderar los requisitos de precedencia}
+\label{9.8.2}
+
+{Se plantea hasta que punto algunas actividades necesitan esperar a que otras hayan terminado para ser iniciadas. También se plantea dividir actividades en sub-actividades donde alguna de ellas pueda iniciarse antes. Estas acciones pueden comprometer la calidad.}
+
+\subsubsection{Conservación del \textit{Business Case}}
+\label{9.8.3}
+
+{La preocupación de los stakeholders será que se mantenga el \textit{Business Case}. Si este se altera, se podría cancelar el proyecto.}
+
+\subsubsection{Planificación de excepciones}
+\label{9.8.4}
+
+{Normalmente se permite al director de proyecto cambiar la planificación mientras los resultados se generen a tiempo y dentro de lo presupuestado. Pero si los cambios afectan a las fechas de entrega, al alcance o a los costes, necesitarán la aprobación de los stakeholders. Para ello, el director de proyecto escribirá un \textbf{Informe de Excepción} (exception report) donde explicará las razones de la desviación del plan existente y detallará las consecuencias. Si el Comité Directivo del Proyecto aprueba el informe, el director de proyecto creará un informe detallado y, si el Comité lo aprueba, podrá ejecutar los cambios al plan.}
+
+\subsection{Control de cambios}
+\label{9.9.0}
+
+{El documento de requisitos de usuario puede cambiar durante los ciclos de desarrollo y revisión del proyecto, pero llegado un punto se considera una versión final y se paraliza el documento. A partir de aquí, cualquier cambio del documento puede afectar al proyecto completo.}
+
+\subsubsection{Rol de bibliotecario de configuraciones}
+\label{9.9.1}
+
+{El bibliotecario de configuraciones, bibliotecario del proyecto o gestor de configuraciones (en el libro lo describen cada vez de una manera) tiene varias responsabilidades con respecto al control de cambios:}
+
+\begin{itemize}
+    \item {Identifica todos los elementos sujetos al control de cambios.}
+    \item {Mantiene un depósito central con las copias maestras de toda la documentación del proyecto y los productos generados.}
+    \item {Establece un procedimiento formal para gestionar cambios.}
+    \item {Mantiene registros de quién tiene acceso a qué artículos de la biblioteca y el estado de cada artículo de la biblioteca.}
+\end{itemize}
+
+\subsubsection{Procedimientos de control de cambios}
+\label{9.9.2}
+
+{Se siguen los siguientes pasos:}
+\begin{enumerate}
+    \item {Un usuario percibe un cambio necesario del sistema.}
+    \item {La Gestión de Usuarios considera (y filtra) las solicitudes de cambio (\textbf{\textit{RFC}}, \textit{Request for Change}) de usuarios, buscando que el cambio genere un beneficio real. De ser así, se lo pasa a Gestión de Desarrollo.}
+    \item {Una sola persona del area de desarrollo recibe y procesa la RFC. Se revisa la practicidad y costes del cambio y los productos afectados por el mismo.}
+    \item {Se informa a la Gestión de Usuarios con los resultados y estos deciden si seguir adelante.}
+    \item {Se priorizarán los RFC a llevar a cabo: el rol de Junta de Control de Cambios, formado por representantes de stakeholders, aceptará y priorizará cambios pequeños documentados en RFC's que no excedan costes ni fechas de entrega. Si el cambio es grande, o se acumulan muchos cambios pequeños, la responsabilidad ascenderá en la jerarquía.}
+    \item {Se aprueba la ejecución de un RFC asignando desarrolladores que solicitarán al bibliotecario accesso a una copia maestra.}
+    \item {Se modifica la copia.}
+    \item {Se avisa a Gestión de Usuarios y se realizan pruebas de aceptación sobre copias de la versión.}
+    \item {Una vez el usuario está satisfecho se autoriza la liberación de copias.}
+\end{enumerate}
+
+\subsubsection{Cambios en el alcance del sistema}
+\label{9.9.3}
+
+{El tamaño del sistema tiende a crecer con los cambios. Es necesario monitorizar esto.}
 
 %---------------------------------------------------
 % Seccion 10
@@ -1113,7 +1354,7 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 % Seccion 11
 %---------------------------------------------------
 \newpage
-\section{Gestión de personas en entornos de software}
+\section[Gestión de personas en entornos de software]{Gestión de personas en entornos de \\software}
 \label{11.0.0}
 
 
@@ -1129,7 +1370,7 @@ Bajo          & Menos del 10\%          & Menos del 10\%                \\ \hlin
 %---------------------------------------------------
 
 \newpage
-\section{Única bibliografía}
+\section{Bibliografía}
 \label{bibliografia}
 \nocite{*}
 \begingroup
